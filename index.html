@@ -143,18 +143,27 @@
               <p>
               Functional requirements/what the project does:
               <ol>
-                <li>1. Generates random birthdays for a group of 5 to 100 people, incrementing by 5</li>
-                <li>2. Checks if any two birthdays match in these groups of people</li>
-                <li>3. Each group of different numbers of people is randomly generated 20 times (for 20 trials)</li>
-                <li>4. The results (percentage of trials with matching birthdays for the different groups) are displayed in side-by-side columns</li>
+                <li>Generates random birthdays for a group of 5 to 100 people, incrementing by 5</li>
+                <li>Checks if any two birthdays match in these groups of people</li>
+                <li>Each group of different numbers of people is randomly generated 20 times (for 20 trials)</li>
+                <li>The results (percentage of trials with matching birthdays for the different groups) are displayed in side-by-side columns</li>
               </ol>
               </p>
               <p>
               Project design
+              <p>This project had 4 classes that helped run the project:
+              <ul>
+                <li>Simulation.java: Contains the PSVM method. Creates an Experiment for 5 to 100 people (incrementing by 5) with 20 trials each and prints the results</li>
+                <li>Experiment.java: Runs the experiment, defined by the number of people and the number of trials it has. Yields the percentage of the trials that have a repeat birthday.</li>
+                <li>Trial.java: Represents a trial within the experiment. Each trial has the number of people in the trial.</li>
+                <li>Birthday.java: Represents a person and their birthday. Creates a random month and day for a birthday, assuming no leap years.</li>
+              </ul>
               <p>- 
               </p>
               <p>
               Implementation
+              <p>For this project, I implemented the Simulation class, the Birthday class, and assisted in implementing clean code principles to all classes for better readability
+              and debugging.</p>
               </p>
 
 
