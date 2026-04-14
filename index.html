@@ -159,7 +159,6 @@
                 <li>Trial.java: Represents a trial within the experiment. Each trial has the number of people in the trial.</li>
                 <li>Birthday.java: Represents a person and their birthday. Creates a random month and day for a birthday, assuming no leap years.</li>
               </ul>
-              <p>- 
               </p>
               <p>
               Implementation
@@ -167,13 +166,64 @@
               and debugging.</p>
               </p>
 
-
             </div>
-
-            
 
           </div>
         </div>
+
+        
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+          
+            <img src="images/BirthdayParadoxResult.png" alt="Image of the result of the Birthday Paradox test with a column titled 'Number of People' on the left, and a column titled 'Percentage' on the right. The numbers in the 
+              Number of People column increase by 5 from 5 to 100, and the numbers in the percentages column start at 0.0 and quickly increase to 100.0 at 50 people and it stays at 100.0 until 100 people." class="img-fluid">
+          
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3>Elevator Simulator</h3>
+              <p>
+              While we don't often think about how an elevator in a building works or answers a call, this is an important part of how we can quickly move through building floors. I wanted to create an Elevator Simulator where I can 
+              customize how the elevators move to understand how elevators work and how they can be optimized for better performance.
+              </p>
+              <p>
+              Functional requirements/what the project does:
+              <ol>
+                <li>The building that is simulated has 4 different kinds of elevators that behave differently: Standard, Freight, Penthouse, and Express.</li>
+                <li>The simulator also has two types of elevator schedulers: A complex scheduler and a simple scheduler. These scheduler assign calls differently.</li>
+                <li>The elevator simulation runs in rounds. Each round, a call is assigned, if possible, and the elevators move to their calls, or use the round to pick up/drop off people at the designated floors.</li>
+                <li>The buildings that the elevators are in are determined by arguments passed into the program, and the building can have any amount of floors and any amount of the different types of elevators.</li>
+              </ol>
+              </p>
+              <p>
+              Project design
+              <p>This project had 10 classes that helped run the project:
+              <ul>
+                <li>Simulator.java: Contains the PSVM method. Runs the simulation and prints out the results of each round</li>
+                <li>Call.java: Represents a call made by a person at a specific floor. Contains the floor the call was made from, and the floor they intend to go to.</li>
+                <li>ComplexScheduler.java: This scheduler assigns calls to the elevator that can get there in the least amount of rounds</li>
+                <li>SimpleScheduler.java: This scheduler assigns calls to the elftmost elevator in the building (determined by the order in which these elevators were added to the simulation).</li>
+                <li>StandardElevator.java: This elevator can visit every floor. It will accept a new call if the pick up and drop off floors of the new call are in the same direction it is already travelling and would not cause it to change direction or it is waiting on the first floor.</li>
+                <li>FreightElevator.java: This elevator can visit every floor. It will not take a new call unless it is empty and will not cause it to have more than one person at a time. If it has any calls it is working to service, it will not change direction to do a new call first.</li>
+                <li>PenthouseElevator.java: This elevator can only travel between the top and ground floors. If empty, it can change direction to answer a call.</li>
+                <li>ExpressElevator.java: This elevator only services the top half of the building and the ground floor. If occupied, it will accept a new call if the pick up and drop off floors of the new call are in the same direction it is already travelling and would not cause it to change 
+                  direction or it is waiting on the first floor. If empty, it will change directions to answer a call.</li>
+                <li>Scheduler.java: An abstract class that defines the general functions that all schedulers have.</li>
+                <li>Elevator.java: An abstract class that defines the general functions that all elevators have.</li>
+              </ul>
+              </p>
+              <p>
+              Implementation
+              <p>For this project, I implemented the Simulator class, the FreightElevator class, the PenthouseElevator class, the SimpleScheduler class, assisted with the Elevator and Scheduler abstract classes, and assisted in implementing clean code principles to all classes for better readability
+              and debugging.</p>
+              </p>
+
+            </div>
+
+          </div>
+        </div>
+
+
       </div>
       
 
