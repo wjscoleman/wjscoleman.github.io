@@ -171,12 +171,13 @@
           </div>
         </div>
 
+
         
         <div class="row">
           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
           
-            <img src="images/ElevatorSimulator.png" alt="Image of the result of the Birthday Paradox test with a column titled 'Number of People' on the left, and a column titled 'Percentage' on the right. The numbers in the 
-              Number of People column increase by 5 from 5 to 100, and the numbers in the percentages column start at 0.0 and quickly increase to 100.0 at 50 people and it stays at 100.0 until 100 people." class="img-fluid">
+            <img src="images/ElevatorSimulator.png" alt="Image of the result of the ElevatorSimulator code with a terminal print out of rounds 44 and 45 of the simulator. Each round shows a list of various elevators 
+              in the far left column, the floor they are on in the 2nd column, the direction they are moving in the 3rd column, and the current calls and people on board in the 4th and 5th columns respectively" class="img-fluid">
           
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
@@ -222,6 +223,66 @@
 
           </div>
         </div>
+
+        
+
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+          
+            <img src="images/ElevatorSimulator.png" alt="Image of the result of the Birthday Paradox test with a column titled 'Number of People' on the left, and a column titled 'Percentage' on the right. The numbers in the 
+              Number of People column increase by 5 from 5 to 100, and the numbers in the percentages column start at 0.0 and quickly increase to 100.0 at 50 people and it stays at 100.0 until 100 people." class="img-fluid">
+          
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3>UberCuts</h3>
+              <p>
+              Haircuts are something everybody gets. Getting one can feel like a tedious chore, and prices can vary drastically depending on where you go. I wanted to create an application that can bring haircuts and other 
+              beauty services right to your door. Similar to Knack tutoring and Doordash, the app will have an interface where you can create an account and select from various listings from other people who are marketting their services.
+              Once you select a service you like at the price you like, the servicer can accept the call and come to your address to complete the job. This application is a mock application, so it doesn't actually connect to a database or 
+              connect real people together
+              </p>
+              <p>
+              Functional requirements/what the project does:
+              <ol>
+                <li>When the application runs, it will prompt the user to enter information to set up their account (like username, name, password)</li>
+                <li>The application has two types of accounts that can be made: Customer and Servicer</li>
+                <li>Customers must add their address to their account, and Servicers must add at least one service they can provide for a price to their account</li>
+                <li>Customers can browse a feed of listings (service list) posted by Servicers, and they can select the listing they would like which will update the Servicer</li>
+                <li>Servicers can post listings to the service list for the services they provide</li>
+                <li>Customers can pay for the service they chose with a credit card, cash, or venmo, and the application will ask for the respective information depending on what they choose</li>
+                <li>Customers can filter the service list based on their search criteria (filtering by price or by type of service)</li>
+              </ol>
+              </p>
+              <p>
+              Project design
+              <p>This project had 15 classes that helped run the project, and was mainly structured and implemented using the Model-View-Controller design pattern.
+              <ul>
+                <li>The Model consists of 13 different classes, and is in charge of all of the logic and processing of data to run the app.</li>
+                  <ul>
+                    <li>Contains customer and servicer object logic and interactions.</li>
+                    <li>Contains the service list and manages interactions here as well.</li>
+                    <li>Utilizes the strategy pattern for implementing the different payment methods (credit, venmo, and cash can be interchanged at runtime depending on user input.)</li>
+                  </ul>
+                <li>The Controller consists of the AppController.java class, which communicates with the View and Model to update the view and give Model information for logic processing.</li>
+                <li>The View is the TerminalView class to print out information in the terminal to the user, and give the user an interactive interface in the terminal.</li>
+                  <ul>
+                    <li>TerminalView implements the View interface, which allows us to add other interfaces (like a GUI) in the future without changing our Controller</li>
+                  </ul>
+              </ul>
+              </p>
+              <p>
+              Implementation
+              <p>For this project, I implemented the Customer, CreditCardPayment, VenmoPayment, CashPayment, ServiceList, Listing, TerminalView, and Simulation classes. 
+                I also assisted in refactoring the AppController class to make it utilize the View in a manner that leave it open for extension in the future. 
+                All the classes that were implemented were done with test driven development to ensure full coverage and basic functionality of our program.</p>
+              </p>
+
+            </div>
+
+          </div>
+        </div>
+        
 
 
       </div>
